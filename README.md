@@ -15,5 +15,5 @@ Connect with me at:
 ## Tools:
 
 1.  Back-End: Python, Flask, SQLAlchemy, Jinja2
-2.  Data Base: PostgreSQL, MongoDB
+2.  Data Base: SQLite
 3.  Front-End: HTML5, CSS3, JavaScript, Bootstrap4, jQuery, AJAX
