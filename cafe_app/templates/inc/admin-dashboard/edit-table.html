@@ -1,0 +1,35 @@
+<div class="modal fade" id="modalEdit">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">Edit Table</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="editMessage" class="mt-2"></div>
+                <form id='editTable' action="" method="post">
+                    <label for="t-id" class="form-label">Table ID</label>
+                    <input id="t-id" type="number" class="form-control" name="t-id" readonly>
+                    <label for="t-e-num" class="form-label">Table Number</label>
+                    <input id="t-e-num" type="number" class="form-control" name="t-num">
+                    <label for="e-position" class="form-label">Position</label>
+                    <input type="text" id="e-position" class="form-control" name="position">
+                    <label for="t-e-spacing" class="form-label">Table Spacing</label>
+                    <input id="t-e-spacing" type="number" class="form-control" name="t-spacing">
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Edit" onclick="updateTable()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

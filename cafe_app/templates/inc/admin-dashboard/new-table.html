@@ -1,0 +1,33 @@
+<div class="modal fade" id="myModal2">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">New Table</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="message" class="mt-2"></div>
+                <form id='newTable' action="" method="post">
+                    <label for="t-num" class="form-label">Table Number</label>
+                    <input id="t-num" type="number" class="form-control" name="t-num">
+                    <label for="position" class="form-label">Position</label>
+                    <input type="text" id="position" class="form-control" name="position">
+                    <label for="t-spacing" class="form-label">Table Spacing</label>
+                    <input id="t-spacing" type="number" class="form-control" name="t-spacing">
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Registration" onclick="newTable()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

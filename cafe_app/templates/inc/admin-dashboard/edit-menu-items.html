@@ -1,0 +1,52 @@
+<div class="modal fade" id="modalEditMenu">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">Edit Menu Item</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="editMMessage" class="mt-2"></div>
+                <form id='editMenu' action="" method="post">
+                    <label for="m-id" class="form-label">Menu ID</label>
+                    <input id="m-id" type="number" class="form-control" name="m-id" readonly>
+
+                    <label for="m-e-name" class="form-label">Name</label>
+                    <input id="m-e-name" type="text" class="form-control" name="m-e-name">
+
+                    <label for="m-e-price" class="form-label">Price</label>
+                    <input id="m-e-price" type="number" class="form-control" name="m-e-price">
+                    
+                    <label for="m-e-picture_path" class="form-label">picture path</label>
+                    <input id="m-e-picture_path" type="url" class="form-control" name="m-e-picture_path">
+
+                    <label for="m-e-status" class="form-label">status</label>
+                    <select id="m-e-status" class="form-select form-select-sm" name="m-e-status" aria-label="Default select example">
+                        <!-- <option selected>Open this select menu</option> -->
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                      </select>
+
+                    <label for="m-e-category_id" class="form-label">category id</label>
+                    <input id="m-e-category_id" type="number" class="form-control" name="m-e-category_id">
+
+                    <label for="m-e-description" class="form-label mt-1">Description</label>
+                    <input type="text" id="m-e-description" class="form-control" name="m-e-description">
+
+                    <input id="btn-newMenu" type="button" class="btn btn-success m-2" value="Edit" onclick="updateMenu()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

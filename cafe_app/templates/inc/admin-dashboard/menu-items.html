@@ -1,0 +1,26 @@
+<div id="m-msg" class="mt-2"></div>
+<div class="mt-2">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalMenu">New menu item</button>
+</div>
+<div id="m" class="table-responsive mt-2">
+    <table class="table  table-striped  table-hover table-bordered border-primary table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">price</th>
+            <th scope="col">status</th>
+            <th scope="col">picture path</th>
+            <th scope="col">description</th>
+            <th scope="col">category</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody id="mbody">
+        </tbody>
+    </table>
+</div>
+
+{% include 'inc/admin-dashboard/new-menu-item.html' %}
+{% include 'inc/admin-dashboard/edit-menu-items.html' %}

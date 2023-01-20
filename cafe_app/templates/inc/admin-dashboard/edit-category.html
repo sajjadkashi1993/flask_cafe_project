@@ -1,0 +1,33 @@
+<div class="modal fade" id="modalEditCategory">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">Edit Category</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="editCMessage" class="mt-2"></div>
+                <form id='editCategory' action="" method="post">
+                    <label for="c-id" class="form-label">Category ID</label>
+                    <input id="c-id" type="number" class="form-control" name="c-id" readonly>
+                    <label for="c-e-name" class="form-label">Category Name</label>
+                    <input id="c-e-name" type="text" class="form-control" name="c-e-name">
+                    <label for="c-e-description" class="form-label">Category description</label>
+                    <input type="text" id="c-e-description" class="form-control" name="c-e-description">
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Edit" onclick="updateCategory()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

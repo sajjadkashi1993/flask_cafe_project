@@ -1,0 +1,29 @@
+{% if form.fname.errors %}
+    {% for message in form.fname.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if form.lname.errors %}
+    {% for message in form.lname.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if form.email.errors %}
+    {% for message in form.email.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if form.phone_number.errors %}
+    {% for message in form.phone_number.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if form.address.errors %}
+    {% for message in form.address.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}

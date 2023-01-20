@@ -1,0 +1,45 @@
+<div class="modal fade" id="modalMenu">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">New menu items</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="messageMenu" class="mt-2"></div>
+                <form id='newMenu' action="" method="post">
+                    <label for="m-name" class="form-label">Name</label>
+                    <input id="m-name" type="text" class="form-control" name="m-name">
+
+                    <label for="m-price" class="form-label">Price</label>
+                    <input id="m-price" type="number" class="form-control" name="m-price">
+                    
+                    <label for="m-picture_path" class="form-label">picture path</label>
+                    <input id="m-picture_path" type="url" class="form-control" name="m-picture_path">
+
+                    <!-- <label for="m-status" class="form-label">status<input id="m-status" type="checkbox" class="checkbox m-2" name="m-status"></label><br> -->
+                    
+                    <label for="m-category_id" class="form-label">category id</label>
+                    <input id="m-category_id" type="text" class="form-control" name="m-category_id">
+
+                    <label for="m-description" class="form-label mt-1">Description</label>
+                    <input type="text" id="m-description" class="form-control" name="m-description">
+
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Registration" onclick="newMenu()">
+                    <input type="reset" class="btn btn-secondary m-2">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

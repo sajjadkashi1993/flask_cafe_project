@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %} Contact_us{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static' , filename='Contact_us/CSS/Contact_us.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}
+{% block body %}
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p class="visit"> Visit
+                <p class="name_coffe">Paris Café</p></p>
+                <p class="open">WE'RE OPEN : <br>
+                <p>Daily,8 am–2 pm</p></p>
+                <p class="serve">SERVING : <br>
+                <p>Daily,8 am–2 pm</p></p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class=" fs-4 fw-bold ">Have a question ?</p>
+                <p>View our FAQs here or get in touch by submitting the form below</p>
+                <form action="" method="POST" id="contact-form">
+                    {{ contact_form.csrf_token }}
+                    <div id="sendMessage" class="mt-2"></div>
+                    <div class="row">
+                        <div class="name col-12 col-lg-6">
+                            <label for="inputPassword" class="col-sm-5 col-form-label">First name </label>
+                            {#                            <input type="text" class="form-control">#}
+                            {{ contact_form.first_name(placeholder="Your First Name" ,class="form-control") }}
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="inputPassword" class="col-sm-5 col-form-label">Last name </label>
+                            {#                            <input type="text" class="form-control">#}
+                            {{ contact_form.last_name(placeholder="Your Last Name", class="form-control") }}
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <label for="inputPassword" class="col-sm-4 col-form-label">Email</label>
+                            {#                            <input type="text" class="form-control">#}
+                            {{ contact_form.email(placeholder="Your Email",class="form-control") }}
+
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="inputPassword" class="col-sm-4 col-form-label">Phone</label>
+                            {#                            <input type="text" class="form-control">#}
+                            {{ contact_form.phone(placeholder="Your Phone",class="form-control") }}
+
+                        </div>
+                    </div>
+                    <label for="exampleFormControlTextarea1" class="form-label">Message </label>
+                    {#                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>#}
+                    {{ contact_form.message(placeholder="Your message",class="form-control" ,id="exampleFormControlTextarea1") }}
+
+
+                    <div class="captcha">
+                        <div class="spinner">
+                            <label>
+                                {#                                {{ contact_form.agree_chaptcha(placeholder="",class="form-control") }}#}
+                                <input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+                                <span class="checkmark"><span>&nbsp;</span></span>
+                            </label>
+                        </div>
+                        <div class="text">
+                            I'm not a robot
+                        </div>
+                        <div class="logo">
+                            <img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/"/>
+                            <p>reCAPTCHA</p>
+                            <small>Privacy - Terms</small>
+                        </div>
+                    </div>
+                    <div class="submit col-12 col-lg-6">
+                        <input type="button" class="btn btn-primary" onclick="get_comments()" value="Send Message">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84007.27888322179!2d2.205784320831315!3d48.853872731656566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d92084c877%3A0xf32b6a006f25849d!2sParis%20Caf%C3%A9!5e0!3m2!1sen!2suk!4v1666073720122!5m2!1sen!2suk"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <script src="{{ url_for('static' , filename='Contact_us/Js/Contact_us.js') }}"></script>
+{% endblock %}

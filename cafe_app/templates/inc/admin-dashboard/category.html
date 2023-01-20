@@ -1,0 +1,22 @@
+<div id="c-msg" class="mt-2"></div>
+<div class="mt-2">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalCategory">New Category</button>
+</div>
+<div id="t" class="table-responsive mt-2">
+    <table class="table  table-striped  table-hover table-bordered border-primary table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">description</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody id="cbody">
+        </tbody>
+    </table>
+</div>
+
+{% include 'inc/admin-dashboard/new-category.html' %}
+{% include 'inc/admin-dashboard/edit-category.html' %}

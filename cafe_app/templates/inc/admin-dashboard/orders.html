@@ -1,0 +1,38 @@
+<div id="o-msg" class="mt-2"></div>
+<div class="mt-2">
+    <form action="">
+        <label for="filter" class="form-label">Filter by Order State</label>
+        <select id="filter" class="form-select form-select-lg" name="filter" aria-label="Default select example" onchange="getOrders()">
+            <!-- <option selected>Open this select menu</option> -->
+            <option value="All Orders">All Orders</option>
+            <option value="New orders">New orders</option>
+            <option value="Cooking orders">Cooking orders</option>
+            <option value="Served orders">Served orders</option>
+            <option value="Deleted Orders">Deleted Orders</option>
+            <option value="Paid Orders">Paid Orders</option>
+            <option value="Archive">Archive</option>
+        </select>
+    </form>
+</div>
+<div id="t" class="table-responsive mt-2">
+    <table class="table  table-striped  table-hover table-bordered border-primary table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">order_time</th>
+            <th scope="col">state</th>
+            <th scope="col">delivery_address</th>
+            <th scope="col">reserved_id</th>
+            <th scope="col">receipt_id</th>
+            <th scope="col">order_type</th>
+            <th scope="col">offer_id</th>
+            <th scope="col">comment</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody id="obody">
+        </tbody>
+    </table>
+</div>
+
+{% include 'inc/admin-dashboard/edit-order.html' %}

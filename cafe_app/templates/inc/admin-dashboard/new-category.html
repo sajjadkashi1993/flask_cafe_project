@@ -1,0 +1,31 @@
+<div class="modal fade" id="modalCategory">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">New Category</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="messageCategory" class="mt-2"></div>
+                <form id='newCategory' action="" method="post">
+                    <label for="c-name" class="form-label">Category Name</label>
+                    <input id="c-name" type="text" class="form-control" name="c-name">
+                    <label for="c-description" class="form-label mt-1">Category description</label>
+                    <input type="text" id="c-description" class="form-control" name="c-description">
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Registration" onclick="newCategory()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

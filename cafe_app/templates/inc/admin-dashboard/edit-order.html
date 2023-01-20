@@ -1,0 +1,40 @@
+<div class="modal fade" id="modalEditOrder">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-family:Roboto,serif">Edit order state</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="editOMessage" class="mt-2"></div>
+                <form id='editOrder' action="" method="post">
+                    <label for="o-id" class="form-label">Order ID</label>
+                    <input id="o-id" type="number" class="form-control" name="o-id" readonly>
+
+                    <label for="o-e-state" class="form-label">Order State</label>
+                    <select id="o-e-state" class="form-select form-select-sm" name="o-e-state" aria-label="Default select example">
+                        <!-- <option selected>Open this select menu</option> -->
+                        <option value="New orders">New orders</option>
+                        <option value="Cooking orders">Cooking orders</option>
+                        <option value="Served orders">Served orders</option>
+                        <option value="Deleted Orders">Deleted Orders</option>
+                        <option value="Paid Orders">Paid Orders</option>
+                        <option value="Archive">Archive</option>
+                      </select>
+                    <input id="btn-newtable" type="button" class="btn btn-success m-2" value="Edit" onclick="updateOrder()">
+                </form>
+
+            </div>
+    
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{% if login_form.email.errors %}
+    {% for message in login_form.email.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if login_form.password.errors %}
+    {% for message in login_form.password.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+{% if login_form.remember.errors %}
+    {% for message in login_form.remember.errors %}
+        <p class="alert alert-danger">{{ message }}</p>
+    {% endfor %}
+{% endif %}

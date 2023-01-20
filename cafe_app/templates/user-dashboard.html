@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %} dashboard {% endblock %}
+{% block link %}
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-12 col-lg-3 bg-light border" id="sidebar">
+            <p id="btn-update-profile" class="btn btn-outline-secondary p-4 mt-2 w-100">Update profile</p><br>
+            <p id="btn-my-orders" class="btn btn-outline-secondary p-4 w-100">My Orders</p>
+        </div>
+        <div class="col- 12 col-lg-9 border" id='views'>
+            <div style="display: block" id="update">
+                <form action="" method="POST" id="update-form">
+                    {{ form.csrf_token }}
+                    <div id='updateMessage' class="mt-2"></div>
+                    <div class="form-group">
+                        {{ form.fname.label(class='form-label') }}
+                        {{ form.fname(placeholder="Your First Name", id="fname", class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.lname.label(class='form-label') }}
+                        {{ form.lname(placeholder="Your Last Name", id="lname", class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email.label(class='form-label') }}
+                        {{ form.email(placeholder="Your email", id="email", class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.address.label(class='form-label') }}
+                        {{ form.address(placeholder="Your address", id="address", class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.phone_number.label(class='form-label') }}
+                        {{ form.phone_number(placeholder="Your phone number", id="phone_number", class="form-control") }}
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="button" name="signup" id="signup" class="btn btn-success my-2" value="Update"
+                               onclick="updateProfile()"/>
+                    </div>
+                </form>
+            </div>
+            <div style="display: none" id="myOrder">
+                <div id="t" class="table-responsive mt-2">
+                    <table class="table  table-striped  table-hover table-bordered border-primary table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">order_time</th>
+                            <th scope="col">state</th>
+                            <th scope="col">delivery_address</th>
+                            <th scope="col">reserved_id</th>
+                            <th scope="col">receipt_id</th>
+                            <th scope="col">order_type</th>
+                            <th scope="col">offer_id</th>
+                            <th scope="col">comment</th>
+                        </tr>
+                        </thead>
+                        <tbody id="u-obody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static' , filename='dashboard/user_dashboard/js.js') }}"></script>
+{% endblock %}
